@@ -65,7 +65,7 @@ $cqid = $update->callback_query->id;
 $chat_id2 = $update->callback_query->message->chat->id;
 $message_id2 = $update->callback_query->message->message_id;
 $botim="uzbek_tgrobot";
-$soat = date('H:i', strtotime('+0 hour'));
+$soat = date('H:i', strtotime('+5 hour'));
 $message = $update->message;
 $mid = $message->message_id;
 $chat_id = $message->chat->id;
@@ -83,7 +83,7 @@ $sana1 = date('d-M Y',strtotime('+5 hour'));
 $sana2 = date('z',strtotime('+5 hour'));
 $gmt = date('O',strtotime('+5 hour'));
 $oynomi = date('F',strtotime('+5 hour'));
-$buoy = date('t',strtotime('+5hour'));
+$buoy = date('t',strtotime('+5 hour'));
 $lang = $message->from->language_code;
 $from = $message->from;
 $id = $message->reply_to_message->from->id;
@@ -162,10 +162,11 @@ $st = bot('sendMessage',[
 $sta = bot('sendMessage',[
 'chat_id'=>$chat_id,
 'text'=> "<b>👋Assalomu alekum 📡
-👮Bu bot gurupoani nazorat qiluvchi bot.
+👮Bu bot gurupoani nazorat qiluvchi bot. 
 
-⚪Telegramni yaxshi tushunsangiz.
-🔴Telegramni yaxshi tushunmasangiz.</b>",
+
+
+🔴Botni ishga tushurish</b>",
 'parse_mode' => 'html',
 'disable_web_page_preview'=>true,
 'reply_markup'=>json_encode(
@@ -299,7 +300,7 @@ if($data=="15-20"){
 🔵<b>Meni Guruppalrga Admin qiling</b> !!
 🔴<b>Men Gururuhni nazorat qilaman.
 📜Rerklama qilgan odamni 👇
-[RED ONLAYN] rejimiga tushuraman.
+[red only] rejimiga tushuraman.
 👥Guruh infosiga ⌚soat qoyaman. 
 💎Guruhga 80ta odam qoshgan 
 odamga admin beradi.</b>
@@ -334,7 +335,7 @@ if($data=="30-35"){
 🔵<b>Meni Guruppalrga Admin qiling</b> !!
 🔴<b>Men Gururuhni nazorat qilaman.
 📜Rerklama qilgan odamni 👇
-[RED ONLAYN] rejimiga tushuraman.
+[red only] rejimiga tushuraman.
 👥Guruh infosiga ⌚soat qoyaman. 
 💎Guruhga 80ta odam qoshgan 
 odamga admin beradi.</b>
@@ -389,7 +390,7 @@ if($data=="35-50"){
 🔵<b>Meni Guruppalrga Admin qiling</b> !!
 🔴<b>Men Gururuhni nazorat qilaman.
 📜Rerklama qilgan odamni 👇
-[RED ONLAYN] rejimiga tushuraman.
+[red only] rejimiga tushuraman.
 👥Guruh infosiga ⌚soat qoyaman. 
 💎Guruhga 80ta odam qoshgan 
 odamga admin beradi.</b>
@@ -424,7 +425,7 @@ if($data=="20-30"){
 🔵<b>Meni Guruppalrga Admin qiling</b> !!
 🔴<b>Men Gururuhni nazorat qilaman.
 📜Rerklama qilgan odamni 👇
-[RED ONLAYN] rejimiga tushuraman.
+[red only] rejimiga tushuraman.
 👥Guruh infosiga ⌚soat qoyaman. 
 💎Guruhga 80ta odam qoshgan 
 odamga admin beradi.</b>
@@ -471,11 +472,11 @@ $sta = bot('sendMessage',[
 'chat_id'=>$chat_id,
 'text'=> "<b>👋Assalumu Aleykum </b>
     
-🔘<b>Mening ismim Advokat👮</b>
+🔘<b>Mening ismim Wordpress Robot👮</b>
 🔵<b>Meni Guruppalrga Admin qiling</b> !!
 🔴<b>Men Gururuhni nazorat qilaman.
 📜Rerklama qilgan odamni 👇
-[RED ONLAYN] rejimiga tushuraman.
+[Red only] rejimiga tushuraman.
 👥Guruh infosiga ⌚soat qoyaman. 
 💎Guruhga 80ta odam qoshgan 
 odamga admin beradi.</b>
@@ -672,7 +673,7 @@ if($data=="back"){
 🔵<b>Meni Guruppalrga Admin qiling</b> !!
 🔴<b>Men Gururuhni nazorat qilaman.
 📜Rerklama qilgan odamni 👇
-[RED ONLAYN] rejimiga tushuraman.
+[red only] rejimiga tushuraman.
 👥Guruh infosiga ⌚soat qoyaman. 
 💎Guruhga 80ta odam qoshgan 
 odamga admin beradi.</b>
