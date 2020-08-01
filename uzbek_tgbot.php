@@ -1,6 +1,7 @@
-
-
-<?php
+/php
+date_default_timezone_set("Asia/Tashkent"); //kod booooshiga qoyiladi
+$vaqt = date("H:i");
+echo $vaqt;
 ob_start();
 define('API_KEY', '1373561733:AAFkRtNZXtnSbwidTwIpIZSE_glZgHxlaeo');
 //tokenni yozing
