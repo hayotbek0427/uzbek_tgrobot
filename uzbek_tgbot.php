@@ -297,7 +297,7 @@ if($data=="15-20"){
     'message_id'=>$message_id2,
     'text'=> "<b>👋Assalumu Aleykum </b>
     
-🔘<b>Mening ismim Advokat👮</b>
+🔘<b>Mening ismim WORDPRESS ASSISTANT👮</b>
 🔵<b>Meni Guruppalrga Admin qiling</b> !!
 🔴<b>Men Gururuhni nazorat qilaman.
 📜Rerklama qilgan odamni 👇
@@ -522,8 +522,8 @@ if($data=="stat1"){
 $gr = substr_count($guruhlar,"\n"); 
 $us = substr_count($userlar,"\n"); 
 $obsh = $gr + $us;
- $soat = date('H:i', strtotime('0 hour'));
-$bugun = date('d-M Y',strtotime('0 hour'));
+ $soat = date('H:i', strtotime('+5 hour'));
+$bugun = date('d-M Y',strtotime('+5 hour'));
    bot('editMessageText',[
    'chat_id'=>$chat_id2,
     'message_id'=>$message_id2,
@@ -543,8 +543,8 @@ if($data=="statais"){
 $gr = substr_count($guruhlar,"\n"); 
 $us = substr_count($userlar,"\n"); 
 $obsh = $gr + $us;
- $soat = date('H:i', strtotime('0 hour'));
-$bugun = date('d-M Y',strtotime('0 hour'));
+ $soat = date('H:i', strtotime('+5 hour'));
+$bugun = date('d-M Y',strtotime('+5 hour'));
    bot('editMessageText',[
    'chat_id'=>$chat_id2,
     'message_id'=>$message_id2,
@@ -1139,20 +1139,20 @@ Delpm - Adminlikdan oladi.
 }
 
 if($text1=="/yangi_yil" or $text=="/yangi_yil$botim"){
-  $kun1 = date('z ',strtotime('0 hour')); 
+  $kun1 = date('z ',strtotime('+5 hour')); 
   $a = 365;
   $c2 = $a-$kun1;
-  $d = date('L ',strtotime('0 hour'));
+  $d = date('L ',strtotime('+5 hour'));
   $b = $c2+$d;
   $f = $b+81;
   $e = $b+240;
-  $kun2 = date('H ',strtotime('0 hour')); 
+  $kun2 = date('H ',strtotime('+5 hour')); 
   $a2 = 23;
   $b2 = $a2-$kun2;
-  $kun3 = date('i ',strtotime('0 hour')); 
+  $kun3 = date('i ',strtotime('+5 hour')); 
   $a3 = 59;
   $b3 = $a3-$kun3;
-  $kun4 = date('s ',strtotime('0 hour')); 
+  $kun4 = date('s ',strtotime('+5 hour')); 
   $a4 = 60;
   $b4 = $a4-$kun4;
   $yytxt="🎅 <b>Yangi yilga $b kun, $b2 soat, $b3 minut, $b4 sekund qoldi!</b> ⛄";
@@ -1749,27 +1749,27 @@ $us = bot('getChatMembersCount',[
 'chat_id'=>$chat_id,
 ]);
 $count = $us->result;
-$sana = date('d-M Y',strtotime('+0 hour'));
-$soat = date('H:i:s', strtotime('+0 hour'));
+$sana = date('d-M Y',strtotime('++5 hour'));
+$soat = date('H:i:s', strtotime('++5 hour'));
 $login0 = $message->chat->username;
-$kun3 = date('N',strtotime('+0 hour')); 
+$kun3 = date('N',strtotime('++5 hour')); 
 $hafta="1Dushanba1 2Seshanba2 3Chorshanba3 4Payshanba4 5Juma5 6Shanba6 7Yakshanba7"; 
 $ex=explode("$kun3",$hafta); 
 $hafta1="$ex[1]"; 
-$kun1 = date('z ',strtotime('+0 hour')); 
+$kun1 = date('z ',strtotime('++5 hour')); 
 $a = 153;
 $c2 = $a-$kun1;
-$d = date('L ',strtotime('+0 hour'));
+$d = date('L ',strtotime('++5 hour'));
 $b = $c2+$d;
 $f = $b+81;
 $e = $b+240;
-$kun2 = date('H ',strtotime('+0 hour')); 
+$kun2 = date('H ',strtotime('++5 hour')); 
 $a2 = 23;
 $b2 = $a2-$kun2;
-$kun3 = date('i ',strtotime('+0 hour')); 
+$kun3 = date('i ',strtotime('++5 hour')); 
 $a3 = 59;
 $b3 = $a3-$kun3;
-$kun4 = date('s ',strtotime('+0 hour')); 
+$kun4 = date('s ',strtotime('++5 hour')); 
 $a4 = 60;
 $b4 = $a4-$kun4;
 
@@ -2099,7 +2099,7 @@ foreach ($rss->channel->item as $item){
   break;
 }  
 if($data=="yangilik"){
-  $soat = date('H:i', strtotime('0 hour'));
+  $soat = date('H:i', strtotime('+5 hour'));
   bot('answerCallbackQuery',[
     'callback_query_id'=>$cqid,
     'chat_id'=>$ccid, 
@@ -2127,7 +2127,7 @@ if($text=="/kurs" or $text=="/kurs$botim"){
   ]);
 }
 if($data == 'kurs'){
-  $soat = date('H:i', strtotime('0 hour'));
+  $soat = date('H:i', strtotime('+5 hour'));
   bot('answerCallbackQuery',[
     'callback_query_id'=>$cqid,
     'chat_id'=>$ccid,
@@ -4104,7 +4104,7 @@ $EN9 =   explode("/nick", $text1);
 	  }
 
 		if(stripos($mtext,"soat") !== false){
-		$soat = date('H:i', strtotime('0 hour'));
+		$soat = date('H:i', strtotime('+5 hour'));
   $text = "⏰Hozir soat: *$soat*";
   $a=json_encode(bot('sendmessage',[
    'reply_to_message_id'=>$mesid,
@@ -4171,7 +4171,7 @@ bot('SendPhoto',[
 }
 
 		if(stripos($mtext,"sana") !== false){
-        $bugun = date('d-M Y',strtotime('0 hour'));
+        $bugun = date('d-M Y',strtotime('+5 hour'));
   $text = "📆Bugungi sana: *$bugun*";
   $a=json_encode(bot('sendmessage',[
    'reply_to_message_id'=>$mesid,
